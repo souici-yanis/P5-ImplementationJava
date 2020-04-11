@@ -11,11 +11,8 @@ public class FareCalculatorService {
         }
         
         Long inHour = ticket.getInTime().getTime();
-        System.out.println("inHour " + inHour);
         Long outHour = ticket.getOutTime().getTime();
-        System.out.println("outHour " + outHour);
 
-        //TODO: Some tests are failing here. Need to check if this logic is correct
         long duration = (outHour - inHour);
         int timeStampConverted = 3600000; // (1000 * 60 * 60);
         float durationConverted = (float) duration / timeStampConverted; // Convert milisecond to Hour
@@ -35,4 +32,9 @@ public class FareCalculatorService {
             }
         }
     }
+
+    public void applyDiscountTicket(Ticket ticket, double discount) {
+        ticket.setPrice(ticket.getPrice() * (1 - discount));
+    }
+
 }

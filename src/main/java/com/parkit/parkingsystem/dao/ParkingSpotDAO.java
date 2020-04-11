@@ -56,4 +56,26 @@ public class ParkingSpotDAO {
         }
     }
 
+
+    public Boolean isReccuringUser(String vehicleRegNumber){
+        Connection con = null;
+        Boolean result=false;
+        try {
+            con = dataBaseConfig.getConnection();
+            PreparedStatement ps = con.prepareStatement(DBConstants.CHECK_REGISTRATION_EXISTED);
+            ps.setString(1, vehicleRegNumber);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                result = rs.getString(1) != "";
+            }
+            dataBaseConfig.closeResultSet(rs);
+            dataBaseConfig.closePreparedStatement(ps);
+        }catch (Exception ex){
+            logger.error("Error fetching vehicule registration number",ex);
+        }finally {
+            dataBaseConfig.closeConnection(con);
+        }
+        return result;
+    }
+
 }

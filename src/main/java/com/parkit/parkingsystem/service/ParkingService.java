@@ -104,6 +104,13 @@ public class ParkingService {
             Date outTime = new Date();
             ticket.setOutTime(outTime);
             fareCalculatorService.calculateFare(ticket);
+
+            Boolean isRecurringUser = parkingSpotDAO.isReccuringUser(vehicleRegNumber);
+            if(isRecurringUser){
+                fareCalculatorService.applyDiscountTicket(ticket, 0.05);
+                System.out.println("You're reccuring user, 5% discount for your parking fare was applied !");
+            }
+
             if(ticketDAO.updateTicket(ticket)) {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
