@@ -16,8 +16,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.parkit.parkingsystem.config.DataBaseConfig;
-import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.constants.DBConstants;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -66,37 +64,46 @@ public class ParkingDataBaseIT {
         parkingService.processIncomingVehicle();
 
         Connection con = null;
-        DataBaseConfig dataBaseConfig = new DataBaseConfig();
+        DataBaseTestConfig dataBaseConfig = new DataBaseTestConfig();
 
         try {
             con = dataBaseConfig.getConnection();
-            PreparedStatement ps = con.prepareStatement(DBConstants.GET_TICKET);
+            PreparedStatement ps = con.prepareStatement(DBConstants.CHECK_REGISTRATION_EXISTED);
             ps.setString(1, inputReaderUtil.readVehicleRegistrationNumber());
             ResultSet rs = ps.executeQuery();
-            assertNotEquals("", rs.getString("ID"));
+            rs.next();
+            assertEquals("1", rs.getString("ID"));
         } catch (Exception ex){
         }
-        //TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
     }
 
     @Test
     public void testParkingLotExit(){
         testParkingACar();
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-        parkingService.processExitingVehicle();
+
 
         Connection con = null;
-        DataBaseConfig dataBaseConfig = new DataBaseConfig();
+        DataBaseTestConfig dataBaseConfig = new DataBaseTestConfig();
 
         try {
             con = dataBaseConfig.getConnection();
             PreparedStatement ps = con.prepareStatement(DBConstants.GET_TICKET);
             ps.setString(1, inputReaderUtil.readVehicleRegistrationNumber());
             ResultSet rs = ps.executeQuery();
-            assertNotEquals(0, rs.getInt("PRICE"));
+            rs.next();
+
+            assertEquals(0, rs.getInt("PRICE"));
+            assertEquals(null, rs.getDate("OUT_TIME"));
+
+            parkingService.processExitingVehicle();
+            rs = ps.executeQuery();
+            rs.next();
+
+            assertEquals(0, rs.getInt("PRICE"));
+            assertNotEquals(null, rs.getDate("OUT_TIME"));
         } catch (Exception ex){
         }
-        //TODO: check that the fare generated and out time are populated correctly in the database
     }
 
 }
