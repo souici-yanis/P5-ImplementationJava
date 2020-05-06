@@ -1,4 +1,7 @@
 {
-    "maven.view": "hierarchical",
-    "maven.executable.path": "/Users/yanissouici/Desktop/apache/bin/mvn"
+    "maven.view": "flat",
+    "maven.executable.path": "/usr/local/bin/mvn",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.maven.downloadSources": true,
+    "maven.terminal.useJavaHome": true
 }
