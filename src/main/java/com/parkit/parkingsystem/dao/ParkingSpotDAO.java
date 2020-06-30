@@ -66,7 +66,7 @@ public class ParkingSpotDAO {
             ps.setString(1, vehicleRegNumber);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                result = rs.getString(1) != "";
+                result = rs.getString(1).equals("");
             }
             dataBaseConfig.closeResultSet(rs);
             dataBaseConfig.closePreparedStatement(ps);

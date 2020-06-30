@@ -3,5 +3,8 @@
     "maven.executable.path": "/usr/local/bin/mvn",
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.maven.downloadSources": true,
-    "maven.terminal.useJavaHome": true
+    "maven.terminal.useJavaHome": true,
+    "force.revealTestedClass": true,
+    "coverage-gutters.showLineCoverage": true,
+    "java.configuration.maven.userSettings": "/Users/yanissouici/Documents/Logiciel/apache-maven-3.6.3/"
 }
