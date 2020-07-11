@@ -22,12 +22,28 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class ParkingSpotDAOTest {
-
+	
+	private ParkingSpot PS;
+	
     @Test
     public void isReccuringFalse() {
 		ParkingSpotDAO ParkingSpot = new ParkingSpotDAO();
         Boolean isReccured = ParkingSpot.isReccuringUser("test");
         assertEquals(isReccured, false);
+    }
+    
+    @Test
+    public void getNextSpotTest() {
+		ParkingSpotDAO ParkingSpot = new ParkingSpotDAO();
+        int spotted = ParkingSpot.getNextAvailableSlot(ParkingType.CAR);
+        assertEquals(spotted, 2);
+    }
+
+    @Test
+    public void updateParkingEmptyTest() {
+		ParkingSpotDAO ParkingSpotDAO = new ParkingSpotDAO();
+        Boolean isUpdated = ParkingSpotDAO.updateParking(PS);
+        assertEquals(isUpdated, false);
     }
 
 }

@@ -576,7 +576,7 @@
     <SourceLine classname="com.parkit.parkingsystem.util.InputReaderUtil" start="10" end="10" startBytecode="7" endBytecode="7" sourcefile="InputReaderUtil.java" sourcepath="com/parkit/parkingsystem/util/InputReaderUtil.java"/>
   </BugInstance>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 30 Jun 2020 15:50:41 +0200" total_classes="20" referenced_classes="78" total_bugs="28" total_size="673" num_packages="10" java_version="11.0.1" vm_version="11.0.1+13-LTS" cpu_seconds="93.30" clock_seconds="329.00" peak_mbytes="565.92" alloc_mbytes="1024.00" gc_seconds="0.40" priority_2="27" priority_1="1">
+  <FindBugsSummary timestamp="Tue, 30 Jun 2020 15:50:41 +0200" total_classes="20" referenced_classes="78" total_bugs="28" total_size="673" num_packages="10" java_version="11.0.1" vm_version="11.0.1+13-LTS" cpu_seconds="98.85" clock_seconds="410.49" peak_mbytes="566.54" alloc_mbytes="1024.00" gc_seconds="0.43" priority_2="27" priority_1="1">
     <PackageStats package="com.parkit.parkingsystem" total_bugs="0" total_types="5" total_size="157">
       <ClassStats class="com.parkit.parkingsystem.App" sourceFile="App.java" interface="false" size="10" bugs="0"/>
       <ClassStats class="com.parkit.parkingsystem.FareCalculatorServiceTest" sourceFile="FareCalculatorServiceTest.java" interface="false" size="104" bugs="0"/>
