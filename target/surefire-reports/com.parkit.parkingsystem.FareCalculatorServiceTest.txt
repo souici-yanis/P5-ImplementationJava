@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.FareCalculatorServiceTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s - in com.parkit.parkingsystem.FareCalculatorServiceTest
+=======
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s - in com.parkit.parkingsystem.FareCalculatorServiceTest
+>>>>>>> 0f45c8eb3c96d41e8f3577e48f5e8b7b44be0717

@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.TicketDAOTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.039 s - in com.parkit.parkingsystem.TicketDAOTest
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.796 s - in com.parkit.parkingsystem.TicketDAOTest
+>>>>>>> 0f45c8eb3c96d41e8f3577e48f5e8b7b44be0717

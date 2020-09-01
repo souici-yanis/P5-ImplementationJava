@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\test\java\com\parkit\parkingsystem\integration\ParkingDataBaseIT.java
 C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\test\java\com\parkit\parkingsystem\FareCalculatorServiceTest.java
 C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\test\java\com\parkit\parkingsystem\integration\config\DataBaseTestConfig.java
@@ -5,3 +6,12 @@ C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\t
 C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\test\java\com\parkit\parkingsystem\ParkingSpotDAOTest.java
 C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\test\java\com\parkit\parkingsystem\integration\service\DataBasePrepareService.java
 C:\Users\yanis.souici\Desktop\Projet 5\Projet 5\Code\P5-ImplementationJava\src\test\java\com\parkit\parkingsystem\TicketDAOTest.java
+=======
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/integration/config/DataBaseTestConfig.java
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/ParkingServiceTest.java
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/FareCalculatorServiceTest.java
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/integration/ParkingDataBaseIT.java
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/integration/service/DataBasePrepareService.java
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/TicketDAOTest.java
+/Users/yanissouici/Documents/OpenClassRooms/2019-2020/Projet 5/Code/P5-ImplementationJava/src/test/java/com/parkit/parkingsystem/ParkingSpotDAOTest.java
+>>>>>>> 0f45c8eb3c96d41e8f3577e48f5e8b7b44be0717

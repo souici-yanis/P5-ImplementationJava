@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Date;
 
+
 public class ParkingService {
 
     private static final Logger logger = LogManager.getLogger("ParkingService");
@@ -30,7 +31,8 @@ public class ParkingService {
     public void processIncomingVehicle() {
         try{
             ParkingSpot parkingSpot = getNextParkingNumberIfAvailable();
-            if(parkingSpot !=null && parkingSpot.getId() > 0){
+            System.out.println("parkingSpot " + parkingSpot);
+            if(parkingSpot !=null && parkingSpot.getId() >= 0){
                 String vehicleRegNumber = getVehichleRegNumber();
                 parkingSpot.setAvailable(false);
                 parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark it's availability as false
@@ -65,7 +67,7 @@ public class ParkingService {
         try{
             ParkingType parkingType = getVehichleType();
             parkingNumber = parkingSpotDAO.getNextAvailableSlot(parkingType);
-            if(parkingNumber > 0){
+            if(parkingNumber >= 0){
                 parkingSpot = new ParkingSpot(parkingNumber,parkingType, true);
             }else{
                 throw new Exception("Error fetching parking number from DB. Parking slots might be full");
@@ -77,7 +79,7 @@ public class ParkingService {
         }
         return parkingSpot;
     }
-
+    
     private ParkingType getVehichleType(){
         System.out.println("Please select vehicle type from menu");
         System.out.println("1 CAR");
@@ -92,7 +94,7 @@ public class ParkingService {
             }
             default: {
                 System.out.println("Incorrect input provided");
-                throw new IllegalArgumentException("Entered input is invalid");
+                return ParkingType.CAR;
             }
         }
     }
