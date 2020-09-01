@@ -41,15 +41,19 @@ public class TicketDAO {
     }
 
     public Ticket getTicket(String vehicleRegNumber) {
+        System.out.println("test");
         Connection con = null;
         Ticket ticket = null;
+        System.out.println("2");
         try {
             con = dataBaseConfig.getConnection();
             PreparedStatement ps = con.prepareStatement(DBConstants.GET_TICKET);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
             ps.setString(1,vehicleRegNumber);
             ResultSet rs = ps.executeQuery();
+            System.out.println("3");
             if(rs.next()){
+                System.out.println("4");
                 ticket = new Ticket();
                 ParkingSpot parkingSpot = new ParkingSpot(rs.getInt(1), ParkingType.valueOf(rs.getString(6)),false);
                 ticket.setParkingSpot(parkingSpot);
@@ -62,8 +66,10 @@ public class TicketDAO {
             dataBaseConfig.closeResultSet(rs);
             dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception ex){
+            System.out.println("error");
             logger.error("Error fetching next available slot",ex);
         }finally {
+            System.out.println("finally");
             dataBaseConfig.closeConnection(con);
             return ticket;
         }
