@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.ParkingSpotDAOTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.232 s - in com.parkit.parkingsystem.ParkingSpotDAOTest
-=======
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s - in com.parkit.parkingsystem.ParkingSpotDAOTest
->>>>>>> 0f45c8eb3c96d41e8f3577e48f5e8b7b44be0717
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.218 s <<< FAILURE! - in com.parkit.parkingsystem.ParkingSpotDAOTest
+com.parkit.parkingsystem.ParkingSpotDAOTest.getNextSpotTest  Time elapsed: 2.024 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-1> but was: <2>
+	at com.parkit.parkingsystem.ParkingSpotDAOTest.getNextSpotTest(ParkingSpotDAOTest.java:39)
+

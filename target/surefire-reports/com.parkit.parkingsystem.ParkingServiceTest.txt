@@ -1,8 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: com.parkit.parkingsystem.ParkingServiceTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.222 s - in com.parkit.parkingsystem.ParkingServiceTest
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.305 s - in com.parkit.parkingsystem.ParkingServiceTest
->>>>>>> 0f45c8eb3c96d41e8f3577e48f5e8b7b44be0717
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.341 s <<< FAILURE! - in com.parkit.parkingsystem.ParkingServiceTest
+com.parkit.parkingsystem.ParkingServiceTest.getParkingNumber  Time elapsed: 1.283 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <com.parkit.parkingsystem.model.ParkingSpot@0>
+	at com.parkit.parkingsystem.ParkingServiceTest.getParkingNumber(ParkingServiceTest.java:72)
+
+com.parkit.parkingsystem.ParkingServiceTest.processIncomingVehicleTest  Time elapsed: 0.004 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.parkit.parkingsystem.ParkingServiceTest.setUpPerTest(ParkingServiceTest.java:38)
+  2. -> at com.parkit.parkingsystem.ParkingServiceTest.setUpPerTest(ParkingServiceTest.java:46)
+  3. -> at com.parkit.parkingsystem.ParkingServiceTest.setUpPerTest(ParkingServiceTest.java:48)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
