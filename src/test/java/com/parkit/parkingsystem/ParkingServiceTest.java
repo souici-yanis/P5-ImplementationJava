@@ -81,6 +81,14 @@ public class ParkingServiceTest {
     	assertEquals(expected.getPrice(), 0);
     	assertEquals(expected.getOutTime(), null);
     }
+
+    @Test
+    public void getNextParkingNumberIfAvailableTest(){
+        ParkingSpot PS = parkingService.getNextParkingNumberIfAvailable();
+        System.out.println(PS);
+        //Check first place available exist and equal 0
+    	assertEquals(PS.getId(), 0);
+    }
     
     
 }
