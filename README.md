@@ -47,3 +47,9 @@ The app has unit tests and integration tests written. More of these need to be a
 To run the tests from maven, go to the folder that contains the pom.xml file and execute the below command.
 
 `mvn test`
+
+
+### Reports 
+
+To see the reports files, go to the folder named "target" that contains surefire and jacoco reports.
+
